@@ -23,6 +23,7 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { CardsComponent } from './card/card.component';
 import { MyImageComponent } from './my-image/my-image.component';
 import { MyImageService } from './my-image/my-image.service';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { MyImageService } from './my-image/my-image.service';
     RouterModule.forChild(ComponentsRoutes),
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    SharedModule
   ],
   declarations: [
     NgbdpregressbarBasicComponent,
