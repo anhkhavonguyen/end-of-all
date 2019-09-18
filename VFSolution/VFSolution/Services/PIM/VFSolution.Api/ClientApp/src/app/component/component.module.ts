@@ -21,6 +21,8 @@ import { NgbdtimepickerBasicComponent } from './timepicker/timepicker.component'
 import { NgbdtypeheadBasicComponent } from './typehead/typehead.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { CardsComponent } from './card/card.component';
+import { MyImageComponent } from './my-image/my-image.component';
+import { MyImageService } from './my-image/my-image.service';
 
 @NgModule({
   imports: [
@@ -45,7 +47,11 @@ import { CardsComponent } from './card/card.component';
     NgbdtimepickerBasicComponent,
     NgbdtypeheadBasicComponent,
     ButtonsComponent,
-    CardsComponent
+    CardsComponent,
+    MyImageComponent
+  ],
+  providers:[
+    MyImageService
   ]
 })
 export class ComponentsModule {}
