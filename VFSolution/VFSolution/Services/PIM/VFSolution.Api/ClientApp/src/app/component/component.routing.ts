@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 
 import { CardsComponent } from './card/card.component';
 import { MyImageComponent } from './my-image/my-image.component';
+import { NgbdtabsBasicComponent } from './tabs/tabs.component';
 
 export const ComponentsRoutes: Routes = [
   {
@@ -23,12 +24,24 @@ export const ComponentsRoutes: Routes = [
         path: 'my-images',
         component: MyImageComponent,
         data: {
-          title: 'My Images',
+          title: 'Unsplash',
           urls: [
-            { title: 'My Images', url: '/dashboard' }
+            { title: 'Unsplash', url: '/dashboard' }
           ]
         }
       },
+      {
+        path: 'stories',
+        component: NgbdtabsBasicComponent,
+        data: {
+          title: 'Stories',
+          urls: [
+            { title: 'Dashboard', url: '/dashboard' },
+            { title: 'ngComponent' },
+            { title: 'Stories' }
+          ]
+        }
+      }
     ]
   }
 ];

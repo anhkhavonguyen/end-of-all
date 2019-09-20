@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,10 +10,7 @@ using System.Reflection;
 using System.Text;
 using VFSolution.Common.Config;
 using VFSolution.PIM.Application.Customer;
-using VFSolution.PIM.Application.Invoice;
 using VFSolution.PIM.Application.Mapping;
-using VFSolution.PIM.Application.PurchaseOrder;
-using VFSolution.PIM.Application.Store;
 using VFSolution.PIM.Application.User;
 using VFSolution.PIM.Infrastructure.Services.Authentication;
 using VFSolution.PIM.Persistence;
@@ -71,10 +67,7 @@ namespace VFSolution.Api
 
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IPurchaseOrderService, PurchaseOrderService>();
             services.AddScoped<ICustomerService, CustomerService>();
-            services.AddScoped<IInvoiceService, InvoiceService>();
-            services.AddScoped<IStoreService, StoreService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

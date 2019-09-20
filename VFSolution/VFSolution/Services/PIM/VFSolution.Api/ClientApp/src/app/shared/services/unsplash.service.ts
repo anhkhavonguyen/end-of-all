@@ -28,7 +28,15 @@ export class UnsplashService {
         ]);
     }
 
-    public GetImageById(id: string, width?: number, height?: number, rectangle?: Array<number>) {
+    public GetPhotoById(id: string, width?: number, height?: number, rectangle?: Array<number>) {
         return this.unsplash.photos.getPhoto(id, width, height, rectangle).then(toJson);
+    }
+
+    public GetPhotosByUsername(username: string, page?: number, perPage?: number, orderBy?: string, stats?: boolean) {
+        return this.unsplash.users.photos(username, page, perPage, false).then(toJson);
+    }
+
+    public GetUserProfile(username: string) {
+        return this.unsplash.users.profile(username).then(toJson);
     }
 }

@@ -10,6 +10,5 @@ namespace VFSolution.PIM.Domain.Entities
         public string POCode { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }
-        public virtual ICollection<Store> Stores { get; set; }
     }
 }

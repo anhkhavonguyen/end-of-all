@@ -9,9 +9,9 @@ export const Approutes: Routes = [
     path: '',
     component: FullComponent,
     children: [
-      { path: '', redirectTo: '/starter', pathMatch: 'full' },
+      { path: '', redirectTo: '/about', pathMatch: 'full' },
       {
-        path: 'starter',
+        path: 'about',
         loadChildren: () => import('./starter/starter.module').then(m => m.StarterModule)
       },
       {
@@ -22,6 +22,6 @@ export const Approutes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '/starter'
+    redirectTo: '/about'
   }
 ];
