@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpService } from 'src/app/shared/services/http.service';
+import { HttpService } from '../../shared/services/http.service';
 
 const imageApi = 'https://unsplash.com/photos/ILJ-tlaXxfQ';
 

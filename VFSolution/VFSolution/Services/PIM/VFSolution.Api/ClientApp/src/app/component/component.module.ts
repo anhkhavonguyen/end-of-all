@@ -24,6 +24,7 @@ import { CardsComponent } from './card/card.component';
 import { MyImageComponent } from './my-image/my-image.component';
 import { MyImageService } from './my-image/my-image.service';
 import { SharedModule } from '../shared/shared.module';
+import { UnsplashService } from '../shared/services/unsplash.service';
 
 @NgModule({
   imports: [
@@ -52,8 +53,9 @@ import { SharedModule } from '../shared/shared.module';
     CardsComponent,
     MyImageComponent
   ],
-  providers:[
-    MyImageService
+  providers: [
+    MyImageService,
+    UnsplashService
   ]
 })
-export class ComponentsModule {}
+export class ComponentsModule { }
