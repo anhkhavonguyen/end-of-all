@@ -36,8 +36,6 @@ export const ComponentsRoutes: Routes = [
         data: {
           title: 'Stories',
           urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
             { title: 'Stories' }
           ]
         }
