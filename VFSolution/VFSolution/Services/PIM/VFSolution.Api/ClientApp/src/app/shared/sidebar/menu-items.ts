@@ -63,7 +63,7 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '',
-    title: 'Something',
+    title: 'Reading',
     icon: '',
     class: 'nav-small-cap',
     label: '',
@@ -73,7 +73,17 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '/component/cards',
-    title: 'Card',
+    title: 'Blog',
+    icon: 'mdi mdi-blur-radial',
+    class: '',
+    label: '',
+    labelClass: '',
+    extralink: false,
+    submenu: []
+  },
+  {
+    path: '/component/cards',
+    title: 'Videos',
     icon: 'mdi mdi-blur-radial',
     class: '',
     label: '',

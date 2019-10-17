@@ -12,11 +12,11 @@ export const ComponentsRoutes: Routes = [
         path: 'cards',
         component: CardsComponent,
         data: {
-          title: 'Cards',
+          title: 'Blogs',
           urls: [
             { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Cards' }
+            { title: 'Reading' },
+            { title: 'Blogs' }
           ]
         }
       },
