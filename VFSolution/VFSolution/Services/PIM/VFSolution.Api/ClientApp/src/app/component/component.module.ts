@@ -10,7 +10,6 @@ import { NgbdpregressbarBasicComponent } from './progressbar/progressbar.compone
 import { NgbdpaginationBasicComponent } from './pagination/pagination.component';
 import { NgbdAccordionBasicComponent } from './accordion/accordion.component';
 import { NgbdAlertBasicComponent } from './alert/alert.component';
-import { NgbdCarouselBasicComponent } from './carousel/carousel.component';
 import { NgbdDatepickerBasicComponent } from './datepicker/datepicker.component';
 import { NgbdDropdownBasicComponent } from './dropdown-collapse/dropdown-collapse.component';
 import { NgbdModalBasicComponent } from './modal/modal.component';
@@ -25,6 +24,7 @@ import { MyImageComponent } from './my-image/my-image.component';
 import { MyImageService } from './my-image/my-image.service';
 import { SharedModule } from '../shared/shared.module';
 import { UnsplashService } from '../shared/services/unsplash.service';
+import { ContentService } from './tabs/content.component.service';
 
 @NgModule({
   imports: [
@@ -40,7 +40,6 @@ import { UnsplashService } from '../shared/services/unsplash.service';
     NgbdpaginationBasicComponent,
     NgbdAccordionBasicComponent,
     NgbdAlertBasicComponent,
-    NgbdCarouselBasicComponent,
     NgbdDatepickerBasicComponent,
     NgbdDropdownBasicComponent,
     NgbdModalBasicComponent,
@@ -55,7 +54,10 @@ import { UnsplashService } from '../shared/services/unsplash.service';
   ],
   providers: [
     MyImageService,
-    UnsplashService
-  ]
+    UnsplashService,
+    ContentService
+  ],
+  exports: [
+  ],
 })
 export class ComponentsModule { }

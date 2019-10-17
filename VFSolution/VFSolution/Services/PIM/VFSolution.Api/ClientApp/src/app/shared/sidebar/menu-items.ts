@@ -13,7 +13,7 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '/about',
-    title: 'Hi All',
+    title: 'Introduction',
     icon: 'mdi mdi-emoticon-excited',
     class: '',
     label: '',
