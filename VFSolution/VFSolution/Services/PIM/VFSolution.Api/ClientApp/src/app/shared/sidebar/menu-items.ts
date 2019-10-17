@@ -52,6 +52,26 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
+    path: '/component/my-images',
+    title: 'Unsplash',
+    icon: 'mdi mdi-image',
+    class: '',
+    label: '',
+    labelClass: '',
+    extralink: false,
+    submenu: []
+  },
+  {
+    path: '',
+    title: 'Something',
+    icon: '',
+    class: 'nav-small-cap',
+    label: '',
+    labelClass: '',
+    extralink: true,
+    submenu: []
+  },
+  {
     path: '/component/cards',
     title: 'Card',
     icon: 'mdi mdi-blur-radial',
@@ -61,14 +81,4 @@ export const ROUTES: RouteInfo[] = [
     extralink: false,
     submenu: []
   },
-  {
-    path: '/component/my-images',
-    title: 'Unsplash',
-    icon: 'mdi mdi-image',
-    class: '',
-    label: '',
-    labelClass: '',
-    extralink: false,
-    submenu: []
-  }
 ];
