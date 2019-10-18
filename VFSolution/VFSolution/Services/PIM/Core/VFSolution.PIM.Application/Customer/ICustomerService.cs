@@ -16,6 +16,7 @@ namespace VFSolution.PIM.Application.Customer
         Task<string> UpdateAsync(UpdateCustomerRequest request);
 
         PagedResult<CustomerModel> Get(CommonRequest request);
+
         Task<CustomerModel> GetById(Guid id);
 
         Task<string> DeleteAsync(DeleteCustomerRequest request);

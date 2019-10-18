@@ -14,7 +14,7 @@ namespace VFSolution.PIM.Persistence
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
-
+        public DbSet<Blog> Blogs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -41,6 +41,10 @@ namespace VFSolution.PIM.Persistence
             entityConfig.HasKey(x => x.Id);
         }
         public void Setup(EntityTypeBuilder<Category> entityConfig)
+        {
+            entityConfig.HasKey(x => x.Id);
+        }
+        public void Setup(EntityTypeBuilder<Blog> entityConfig)
         {
             entityConfig.HasKey(x => x.Id);
         }

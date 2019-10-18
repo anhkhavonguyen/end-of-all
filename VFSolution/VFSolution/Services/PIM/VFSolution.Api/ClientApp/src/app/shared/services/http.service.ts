@@ -8,25 +8,25 @@ export class HttpService {
     constructor(private http: HttpClient) {
     }
 
-    public post<T>(url: string, data?: T, option?: Object): Observable<T> {
+    public post<T>(url: string, data?: T, option?: Object): Observable<any> {
         return this.http
             .post<T>(url, data, option);
     }
 
-    public put<T>(url: string, data?: T): Observable<T> {
+    public put<T>(url: string, data?: T): Observable<any> {
         return this.http
             .put<T>(url, data);
     }
 
-    public delete(url: string) {
+    public delete(url: string, data?: any) {
         return this.http
-            .delete<boolean>(url);
+            .delete<boolean>(url, { params: data });
     }
 
     public get<T>(url: string, option?: any): Observable<T> {
         if (option) {
             return this.http
-                .get<T>(url, {params: option});
+                .get<T>(url, { params: option });
         } else {
             return this.http
                 .get<T>(url);

@@ -10,6 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Reflection;
 using System.Text;
 using VFSolution.Common.Config;
+using VFSolution.PIM.Application.Blogs;
 using VFSolution.PIM.Application.Customer;
 using VFSolution.PIM.Application.Mapping;
 using VFSolution.PIM.Application.User;
@@ -74,6 +75,7 @@ namespace VFSolution.Api
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IBlogService, BlogService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

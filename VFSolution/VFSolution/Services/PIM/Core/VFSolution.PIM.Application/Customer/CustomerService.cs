@@ -62,6 +62,7 @@ namespace VFSolution.PIM.Application.Customer
             var query = await _dbContext.Customers.FirstOrDefaultAsync(x => x.Id == id);
             return Mapper.Map<Domain.Entities.Customer, CustomerModel>(query);
         }
+
         public async Task<IEnumerable<CustomerModel>> GetCustomersWithoutPaging()
         {
             var result = await _dbContext.Customers.Select(x => new CustomerModel
