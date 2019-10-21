@@ -29,7 +29,7 @@ namespace KVSolution.PIM.Persistence
                    var kVDbContext = serviceProvider.GetRequiredService<KVDbContext>();
 
                    kVDbContext.Database.Migrate();
-                   SeedUserAsync(kVDbContext).Wait();
+                   //SeedUserAsync(kVDbContext).Wait();
                    //SeedCustomerAsync(kVDbContext).Wait();
                });
             }
