@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KVSolution", "KVSolution", "{64A93EAE-0124-49CA-9D89-6AE36745BC97}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{64A93EAE-0124-49CA-9D89-6AE36745BC97}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{CB749AF8-82DF-484B-A3D5-8923B3AEC435}"
 EndProject
@@ -17,19 +17,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{DFC3D79D-9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{892066FC-F43C-4D9A-9411-3D9C40143B9C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KVSolution.PIM.Common", "KVSolution\Services\PIM\Common\KVSolution.PIM.Common\KVSolution.PIM.Common.csproj", "{B7F0498D-F6BC-46A6-A7BB-AEAE2E083C62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KVSolution.PIM.Common", "src\Services\PIM\Common\KVSolution.PIM.Common\KVSolution.PIM.Common.csproj", "{B7F0498D-F6BC-46A6-A7BB-AEAE2E083C62}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KVSolution.PIM.Application", "KVSolution\Services\PIM\Core\KVSolution.PIM.Application\KVSolution.PIM.Application.csproj", "{F9A14641-39F6-43BB-86E5-18C385AB9EB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KVSolution.PIM.Application", "src\Services\PIM\Core\KVSolution.PIM.Application\KVSolution.PIM.Application.csproj", "{F9A14641-39F6-43BB-86E5-18C385AB9EB1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KVSolution.PIM.Domain", "KVSolution\Services\PIM\Core\KVSolution.PIM.Domain\KVSolution.PIM.Domain.csproj", "{8AFDA6ED-5B9A-4295-8E46-3A4737BF5C4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KVSolution.PIM.Domain", "src\Services\PIM\Core\KVSolution.PIM.Domain\KVSolution.PIM.Domain.csproj", "{8AFDA6ED-5B9A-4295-8E46-3A4737BF5C4D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KVSolution.PIM.Infrastructure", "KVSolution\Services\PIM\Infrastructure\KVSolution.PIM.Infrastructure\KVSolution.PIM.Infrastructure.csproj", "{7A59D23B-5CEA-4B02-898B-E4769F208178}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KVSolution.PIM.Infrastructure", "src\Services\PIM\Infrastructure\KVSolution.PIM.Infrastructure\KVSolution.PIM.Infrastructure.csproj", "{7A59D23B-5CEA-4B02-898B-E4769F208178}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KVSolution.PIM.Persistence", "KVSolution\Services\PIM\Infrastructure\KVSolution.PIM.Persistence\KVSolution.PIM.Persistence.csproj", "{76917DB3-0C16-4569-9A0C-2A449AA7F942}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KVSolution.PIM.Persistence", "src\Services\PIM\Infrastructure\KVSolution.PIM.Persistence\KVSolution.PIM.Persistence.csproj", "{76917DB3-0C16-4569-9A0C-2A449AA7F942}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KVSolution.Common", "KVSolution\BuildingBlocks\KVSolution.Common\KVSolution.Common.csproj", "{4DADED26-FCF7-4B80-9587-87D04DA786D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KVSolution.Common", "src\BuildingBlocks\KVSolution.Common\KVSolution.Common.csproj", "{4DADED26-FCF7-4B80-9587-87D04DA786D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KVSolution.Api", "KVSolution\Services\PIM\KVSolution.Api\KVSolution.Api.csproj", "{74383CB7-B5CB-40B7-B32C-82C51A58D16D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KVSolution.Api", "src\Services\PIM\KVSolution.Api\KVSolution.Api.csproj", "{74383CB7-B5CB-40B7-B32C-82C51A58D16D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
