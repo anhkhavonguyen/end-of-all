@@ -4,17 +4,18 @@ using Microsoft.AspNetCore.Mvc;
 using KVSolution.PIM.Application.Blogs;
 using KVSolution.PIM.Application.Blogs.Request;
 using KVSolution.PIM.Application.Extentions;
-using KVSolution.PIM.Infrastructure.Services.CryptoCurrency;
+
 
 namespace KVSolution.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BlogsController : ControllerBase
+    public class CryptocurrencyController : ControllerBase
     {
         private IBlogService _blogService;
 
-        public BlogsController(IBlogService blogService)
+
+        public CryptocurrencyController(IBlogService blogService)
         {
             _blogService = blogService;
         }
@@ -26,12 +27,7 @@ namespace KVSolution.Api.Controllers
             {
                 return BadRequest(ModelState);
             }
-
-            var data = CryptocurrencyService.makeAPICall();
-
             var res = _blogService.Get(request);
-
-
             return Ok(res);
         }
 
@@ -45,7 +41,6 @@ namespace KVSolution.Api.Controllers
             var res = await _blogService.GetById(id);
             return Ok(res);
         }
-
 
         [HttpGet("without-paging")]
         public async Task<ActionResult> GetBlogs()
