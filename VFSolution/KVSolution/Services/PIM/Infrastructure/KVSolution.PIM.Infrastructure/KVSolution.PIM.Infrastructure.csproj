@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\KVSolution.Common\KVSolution.Common.csproj" />
+    <ProjectReference Include="..\..\Core\KVSolution.PIM.Application\KVSolution.PIM.Application.csproj" />
+  </ItemGroup>
+
+</Project>
