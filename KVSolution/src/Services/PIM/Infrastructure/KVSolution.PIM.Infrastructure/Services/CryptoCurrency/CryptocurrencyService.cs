@@ -1,21 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Web;
 using System.Net;
+using System.Linq;
 
 namespace KVSolution.PIM.Infrastructure.Services.CryptoCurrency
 {
     public static class CryptocurrencyService
     {
         private static string API_KEY = "bc77c358-5071-4690-b8d2-343748eebf98";
+        private static string API_URI = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/map";
 
-        public static string makeAPICall()
+        public static string Get(string symbols)
         {
-            var URL = new UriBuilder("https://pro-api.coinmarketcap.com/v1/cryptocurrency/map");
+            var URL = new UriBuilder(API_URI);
 
             var queryString = HttpUtility.ParseQueryString(string.Empty);
-            queryString["symbol"] = "BTC,USDT,BNB";
+            queryString["symbol"] = string.Join(",", symbols); 
 
             URL.Query = queryString.ToString();
 

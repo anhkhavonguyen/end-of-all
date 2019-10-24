@@ -28,6 +28,8 @@ import { ContentService } from './tabs/content.component.service';
 import { CardService } from './card/card.service';
 import { NgbdModalConfig } from './dialogs/modal-config/modal-config';
 import { AddBlog } from './card/add-blog/add-blog';
+import { CryptocurrencyService } from './cryptocurrency/cryptocurrency.service';
+import { CryptocurrenciesComponent } from './cryptocurrency/cryptocurrency.component';
 
 @NgModule({
   imports: [
@@ -55,7 +57,8 @@ import { AddBlog } from './card/add-blog/add-blog';
     CardsComponent,
     MyImageComponent,
     NgbdModalConfig,
-    AddBlog
+    AddBlog,
+    CryptocurrenciesComponent
   ],
   providers: [
     MyImageService,
@@ -63,7 +66,8 @@ import { AddBlog } from './card/add-blog/add-blog';
     ContentService,
     CardService,
     NgbdModalConfig,
-    AddBlog
+    AddBlog,
+    CryptocurrencyService
   ],
   exports: [NgbdModalConfig,AddBlog],
 })

@@ -27,10 +27,7 @@ namespace KVSolution.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            var data = CryptocurrencyService.makeAPICall();
-
             var res = _blogService.Get(request);
-
 
             return Ok(res);
         }

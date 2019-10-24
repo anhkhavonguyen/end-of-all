@@ -91,4 +91,24 @@ export const ROUTES: RouteInfo[] = [
     extralink: false,
     submenu: []
   },
+  {
+    path: '',
+    title: 'Cryptocurrency',
+    icon: '',
+    class: 'nav-small-cap',
+    label: '',
+    labelClass: '',
+    extralink: true,
+    submenu: []
+  },
+  {
+    path: '/component/cryptocurrency',
+    title: 'Cryptocurrency',
+    icon: 'mdi mdi-image',
+    class: '',
+    label: '',
+    labelClass: '',
+    extralink: false,
+    submenu: []
+  }
 ];

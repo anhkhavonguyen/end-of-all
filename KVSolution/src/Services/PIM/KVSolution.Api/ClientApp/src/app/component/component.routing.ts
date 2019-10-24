@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { CardsComponent } from './card/card.component';
 import { MyImageComponent } from './my-image/my-image.component';
 import { NgbdtabsBasicComponent } from './tabs/tabs.component';
+import { CryptocurrenciesComponent } from './cryptocurrency/cryptocurrency.component';
 
 export const ComponentsRoutes: Routes = [
   {
@@ -37,6 +38,16 @@ export const ComponentsRoutes: Routes = [
           title: 'Stories',
           urls: [
             { title: 'Stories' }
+          ]
+        }
+      },
+      {
+        path: 'cryptocurrency',
+        component: CryptocurrenciesComponent,
+        data: {
+          title: 'Cryptocurrencies',
+          urls: [
+            { title: 'Cryptocurrencies' }
           ]
         }
       }
