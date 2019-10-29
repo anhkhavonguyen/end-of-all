@@ -1,4 +1,4 @@
-export class CurrencyModel{
+export class CurrencyItem{
     public id = '';
     public name = '';
     public symbol = '';
@@ -24,15 +24,6 @@ export class GetDataRequest {
 }
 
 export class GetDataResponse {
-    constructor(response?: any) {
-        if (!response) { return; }
-        this.results = response.Data;
-        this.pageIndex = response.pageNumber;
-        this.pageSize = response.pageSize;
-        this.totalItem = response.totalItem;
-    }
-    public results!: Array<CurrencyModel>;
-    public pageIndex = 0;
-    public pageSize = 0;
-    public totalItem = 0;
+    public Data!: Array<CurrencyItem>;
+    public Status = 0;
 }

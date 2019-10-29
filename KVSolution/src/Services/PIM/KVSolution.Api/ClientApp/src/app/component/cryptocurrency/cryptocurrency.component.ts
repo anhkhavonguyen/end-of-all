@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CryptocurrencyService } from './cryptocurrency.service';
-import { GetDataRequest } from './models/cryptocurrency.model';
+import { GetDataRequest, CurrencyItem } from './models/cryptocurrency.model';
+import { map } from 'rxjs/operators';
 
 @Component({
     templateUrl: 'cryptocurrency.component.html',
@@ -12,11 +13,13 @@ export class CryptocurrenciesComponent {
         this.get();
     }
 
+    data: Array<CurrencyItem>;
+
     public get() {
         let request = new GetDataRequest();
         request.searchText = 'BTC,USDT,BNB';
-        this.cryptocurrencyService.get(request).subscribe(data => {
-            console.log(data);
-        });
+        this.cryptocurrencyService.get(request).subscribe(data=>{
+console.log(data);
+        })
     }
 }
