@@ -6,11 +6,10 @@ using KVSolution.PIM.Application.Cryptocurrencies;
 
 namespace KVSolution.Api.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]
+    [ApiController]
     public class CryptocurrencyController : ControllerBase
     {
-
         public CryptocurrencyController()
         {
         }

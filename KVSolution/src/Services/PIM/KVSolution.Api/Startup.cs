@@ -31,7 +31,6 @@ namespace KVSolution.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddSpaStaticFiles(configuration =>
             {
@@ -64,24 +63,26 @@ namespace KVSolution.Api
                     });
             });
 
-            //services.AddAuthentication(x =>
-            //{
-            //    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            //}).AddJwtBearer(x =>
-            //{
-            //    x.RequireHttpsMetadata = false;
-            //    x.SaveToken = true;
-            //    x.TokenValidationParameters = new TokenValidationParameters
-            //    {
-            //        ValidateIssuerSigningKey = true,
-            //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(token.Secret)),
-            //        ValidIssuer = token.Issuer,
-            //        ValidAudience = token.Audience,
-            //        ValidateIssuer = false,
-            //        ValidateAudience = false
-            //    };
-            //});
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(token.Secret)),
+                    ValidIssuer = token.Issuer,
+                    ValidAudience = token.Audience,
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
 
             MappingConfiguration.Execute();
 
@@ -94,6 +95,8 @@ namespace KVSolution.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseCors("AllowAll");
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
@@ -118,8 +121,6 @@ namespace KVSolution.Api
             {
                 app.UseHsts();
             }
-
-            app.UseCors("AllowAll");
 
             //app.UseAuthentication();
         }

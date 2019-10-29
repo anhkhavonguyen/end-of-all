@@ -1,24 +1,28 @@
-<div class="row" *ngFor="let item of data">
+<div class="row">
     <div class="col-12 m-t-30">
         <h4 class="m-b-0">Cryptocurrency</h4>
         <p class="text-muted m-t-0 font-12">Cryptocurrency Data</p>
     </div>
-    <div class="col-md-6">
-        <div class="card card-outline-info">
-            <div class="card-header">
-                <div class="row">
-                    <!-- <h4 class="m-b-0 col-md-6 text-white">{{item.Name}}</h4> -->
-                    <h4 class="m-b-0 col-md-6 text-white btn-remove">X</h4>
+    <div class="row">
+        <div *ngFor="let item of data">
+            <div class="col-md-6">
+                <div class="card card-outline-info" style="width: 300px;">
+                    <div class="card-header">
+                        <div class="row">
+                            <h4 class="m-b-0 col-md-6 text-white">{{item.symbol}}</h4>
+                            <h4 class="m-b-0 col-md-6 text-white btn-remove">X</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Name: {{item.name}}</h3>
+                        <p class="card-text">Rank: {{item.rank}}</p>
+                        <a href="#" class="btn btn-inverse">Go </a>
+                    </div>
                 </div>
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">Special title treatment</h3>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-inverse">Go </a>
             </div>
         </div>
     </div>
-
+   
     <div class="col-md-12">
         <div class="card card-outline-success">
             <div class="card-header">Action

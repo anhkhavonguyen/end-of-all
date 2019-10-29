@@ -13,13 +13,14 @@ export class CryptocurrenciesComponent {
         this.get();
     }
 
-    data: Array<CurrencyItem>;
+    data: CurrencyItem[];
 
     public get() {
         let request = new GetDataRequest();
         request.searchText = 'BTC,USDT,BNB';
-        this.cryptocurrencyService.get(request).subscribe(data=>{
-console.log(data);
+        this.cryptocurrencyService.get(request).subscribe(data => {
+            console.log(data);
+            this.data = data.data.sort(v=> Number(v.rank));
         })
     }
 }

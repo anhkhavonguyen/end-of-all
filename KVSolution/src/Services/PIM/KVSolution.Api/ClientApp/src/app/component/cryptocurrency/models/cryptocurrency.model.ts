@@ -24,6 +24,6 @@ export class GetDataRequest {
 }
 
 export class GetDataResponse {
-    public Data!: Array<CurrencyItem>;
-    public Status = 0;
+    public data!: Array<CurrencyItem>;
+    public status = 0;
 }
