@@ -6,7 +6,7 @@ using KVSolution.PIM.Application.Cryptocurrencies;
 
 namespace KVSolution.Api.Controllers
 {
-    [Produces("application/json")]
+    [ApiController]
     [Route("api/[controller]")]
     public class CryptocurrencyController : ControllerBase
     {

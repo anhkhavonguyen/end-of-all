@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  authorityUri: 'http://localhost:5000/api'
+  authorityUri: 'http://localhost:4200/api'
 };
