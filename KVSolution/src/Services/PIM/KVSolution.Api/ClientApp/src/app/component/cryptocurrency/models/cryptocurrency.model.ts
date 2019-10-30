@@ -7,6 +7,14 @@ export class CurrencyItem{
     public rank = '';
 }
 
+export class CryptocurrencyQuote
+{
+    public id = '';
+    public name = '';
+    public symbol  = '';
+    public quote: Array<CurrencyItem>  = [];
+}
+
 export class GetDataRequest {
     constructor(GetDataRequest?: any) {
         if (!GetDataRequest) { return; }
@@ -25,5 +33,10 @@ export class GetDataRequest {
 
 export class GetDataResponse {
     public data!: Array<CurrencyItem>;
+    public status = 0;
+}
+
+export class GetQuoteResponse {
+    public data!: CryptocurrencyQuote;
     public status = 0;
 }

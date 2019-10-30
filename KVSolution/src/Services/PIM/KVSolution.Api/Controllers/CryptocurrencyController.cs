@@ -34,5 +34,25 @@ namespace KVSolution.Api.Controllers
 
             return Ok(responseData);
         }
+
+        [HttpGet("id")]
+        public IActionResult GetByName([FromQuery]CommonRequest request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var data = CryptocurrencyService.GetById(request.SearchText);
+
+            var responseData = JsonConvert.DeserializeObject<CryptocurrencyQuote>(data, new JsonSerializerSettings
+            {
+                MissingMemberHandling = MissingMemberHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore,
+                DefaultValueHandling = DefaultValueHandling.Ignore
+            });
+
+            return Ok(responseData);
+        }
     }
 }
