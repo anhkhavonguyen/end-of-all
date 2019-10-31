@@ -1,10 +1,8 @@
-export class BlogModel{
-    public id = '';
-    public name = '';
-    public email: string | null = '';
-    public phone = '';
-    public address = '';
-    public poCode = '';
+export class BlogModel {
+    public link = '';
+    public text = '';
+    public title = '';
+    public categoryId = '';
 }
 
 export class GetBlogsRequest {
@@ -40,7 +38,7 @@ export class GetBlogsResponse {
 export class BlogRequest {
     constructor(request?: any) {
         if (!request) { return; }
-        this.blogModel = request.customerModel;
+        this.blogModel = request.blogModel;
     }
     public blogModel: BlogModel;
 }

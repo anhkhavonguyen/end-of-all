@@ -11,7 +11,6 @@ export class CryptocurrenciesComponent {
 
     constructor(private cryptocurrencyService: CryptocurrencyService) {
         this.get();
-        this.getById();
     }
 
     data: CurrencyItem[];
@@ -25,11 +24,15 @@ export class CryptocurrenciesComponent {
         })
     }
 
-    public getById() {
+    public getById(id: string) {
         let request = new GetDataRequest();
-        request.searchText = '1';
+        request.searchText = id;
         this.cryptocurrencyService.getById(request).subscribe(data => {
             console.log(data);
         })
+    }
+
+    public onClickDetail(item : CurrencyItem){
+        this.getById(item.id);
     }
 }

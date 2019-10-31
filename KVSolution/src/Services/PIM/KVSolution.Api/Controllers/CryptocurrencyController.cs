@@ -22,7 +22,6 @@ namespace KVSolution.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            //"BTC,USDT,BNB";
             var data = CryptocurrencyService.Get(request.SearchText);
 
             var responseData = JsonConvert.DeserializeObject<CryptocurrencyModel>(data, new JsonSerializerSettings
