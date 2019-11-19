@@ -93,5 +93,21 @@ namespace KVSolution.PIM.Application.Blogs
 
             return blog.Id.ToString();
         }
+
+        public async Task<string> UpdateBlogTitle(string Id, string Title)
+        {
+            var blog = await _dbContext.Blogs.FirstOrDefaultAsync(p => p.Id == new Guid(Id) && !p.IsDelete);
+
+            if (blog == null)
+            {
+                throw new Exception("Blog not found");
+            }
+
+            blog.Title = Title;
+
+            await _dbContext.SaveChangesAsync();
+
+            return blog.Id.ToString();
+        }
     }
 }

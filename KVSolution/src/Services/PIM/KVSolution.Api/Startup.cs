@@ -16,6 +16,7 @@ using KVSolution.PIM.Application.Mapping;
 using KVSolution.PIM.Application.User;
 using KVSolution.PIM.Infrastructure.Services.Authentication;
 using KVSolution.PIM.Persistence;
+using KVSolution.PIM.Infrastructure.Services.Extension;
 
 namespace KVSolution.Api
 {
@@ -87,9 +88,9 @@ namespace KVSolution.Api
             MappingConfiguration.Execute();
 
             services.AddScoped<IAuthenticationService, AuthenticationService>();
-            services.AddScoped<IUserService, UserService>();
-            services.AddScoped<ICustomerService, CustomerService>();
-            services.AddScoped<IBlogService, BlogService>();
+            services.AddTransientLazy<IUserService, UserService>();
+            services.AddTransientLazy<ICustomerService, CustomerService>();
+            services.AddTransientLazy<IBlogService, BlogService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

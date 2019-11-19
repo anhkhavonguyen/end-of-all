@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  kvsolution.api:
+    image: ${DOCKER_REGISTRY-}kvsolutionapi
+    build:
+      context: .
+      dockerfile: src\Services\PIM\KVSolution.Api\Dockerfile

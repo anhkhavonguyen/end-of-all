@@ -19,5 +19,7 @@ namespace KVSolution.PIM.Application.Blogs
         Task<BlogModel> GetById(Guid id);
 
         Task<string> DeleteAsync(string Id);
+
+        Task<string> UpdateBlogTitle(string Id, string Title);
     }
 }

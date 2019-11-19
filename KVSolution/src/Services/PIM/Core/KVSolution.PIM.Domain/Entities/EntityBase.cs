@@ -2,6 +2,9 @@
 
 namespace KVSolution.PIM.Domain.Entities
 {
+    /// <summary>
+    /// Domain layer just implement business rule for that domain, can apply that business rule for many application layer
+    /// </summary>
     public abstract class EntityBase
     {
         public Guid Id { get; set; }

@@ -2,6 +2,10 @@
 
 namespace KVSolution.PIM.Application.Base
 {
+    /// <summary>
+    /// Application layer for business purpose
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class BaseService<T> where T : class
     {
         public BaseService()

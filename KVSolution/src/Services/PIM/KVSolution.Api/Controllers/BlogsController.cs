@@ -79,5 +79,12 @@ namespace KVSolution.Api.Controllers
             var res = await _blogService.DeleteAsync(Id);
             return Ok(res);
         }
+
+        [HttpPatch]
+        public async Task<IActionResult> Patch(string Id, [FromBody] string Title)
+        {
+            var res = await _blogService.UpdateBlogTitle(Id, Title);
+            return Ok(res);
+        }
     }
 }
